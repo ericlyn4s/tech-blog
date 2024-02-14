@@ -8,12 +8,12 @@ const commentdata = [
   },
   {
     body: 'AI? More like goodbye!!',
-    user_id: 2,
+    user_id: 1,
     post_id: 1,
   },
   {
     body: 'Where am I?',
-    user_id: 2,
+    user_id: 1,
     post_id: 2,
   },
   {
