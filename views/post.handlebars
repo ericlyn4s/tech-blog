@@ -1,9 +1,14 @@
 <section class="card">
   <a href="/post/{{id}}">
-    <header>{{title}}</header>
+    <header>{{post.title}}</header>
 
     <div class="card-body">
-      <p>{{content}}</p>
+      <p>{{post.content}}</p>
     </div>
+
+  <form id="myForm">
+    <input type="text" id="comment" placeholder="Add a comment">
+  <button type="submit">Submit</button>
+</form>
   </a>
 </section>
