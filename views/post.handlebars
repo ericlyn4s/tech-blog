@@ -10,5 +10,9 @@
     <input type="text" id="comment" placeholder="Add a comment">
   <button type="submit">Submit</button>
 </form>
+
+{{#each comments as |comment|}}
+{{> comment-details}}
+{{/each}}
   </a>
 </section>

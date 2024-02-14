@@ -43,6 +43,20 @@ router.get('/post/:id', withAuth, async (req, res) => {
   }
 });
 
+//GET all comments
+router.get('/comment/:id', withAuth, async (req, res) => {
+  try {
+    const dbCommentData = await Comment.findByPk(req.params.id);
+
+    const comment = dbCommentData.get({ plain: true });
+    console.log(comment);
+    res.render('comment', { comment, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
