@@ -64,9 +64,9 @@ nav a, #logout:hover {
   color: var(--secondary);
 }
 
-.gallery {
+main .post {
   flex: 4;
-  background-color: #fff;
+  background-color: var(--secondary);
   padding: 50px;
   display: flex;
   flex-flow: row wrap;
