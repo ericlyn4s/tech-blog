@@ -1,18 +1,18 @@
 <section class="card">
-  <a href="/post/{{id}}">
-    <header>{{post.title}}</header>
 
-    <div class="card-body">
-      <p>{{post.content}}</p>
-    </div>
+<header>{{post.title}}</header>
 
-  <form id="myForm">
+<div class="card-body">
+    <p>{{post.content}}</p>
+</div>
+
+<form id="myForm">
     <input type="text" id="comment" placeholder="Add a comment">
-  <button type="submit">Submit</button>
+    <button type="submit">Submit</button>
 </form>
 
 {{#each comments as |comment|}}
 {{> comment-details}}
 {{/each}}
-  </a>
+
 </section>
