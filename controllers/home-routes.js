@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     const dbPostData = await Post.findAll({
       include: [
         {
-          model: User,
+          model: User, 
           attributes: ['username'],
         },
       ],
@@ -39,6 +39,10 @@ router.get('/post/:id', withAuth, async (req, res) => {
           model: Comment, 
           attributes: ['body'],
         },
+        {
+          model: User,
+          attributes: ['username'],
+        },
       ],
     })
 
@@ -47,8 +51,8 @@ router.get('/post/:id', withAuth, async (req, res) => {
     }
     
     const post = dbPostData.get({ plain: true });
-    
-    res.render('post', { 
+
+    res.render('comments', { 
       post, 
       loggedIn: req.session.loggedIn,
     });
@@ -59,33 +63,6 @@ router.get('/post/:id', withAuth, async (req, res) => {
     }
   });
 
-  /*
-  router.get('/post/:id', async (req, res) => {
-    try {
-      const dbCommentData = await Comment.findAll({
-        include: [
-          {
-            model: User, 
-            attributes: ['username'],
-          },
-        ],
-      });
-  
-      const comments = dbCommentData.map((comment) =>
-        comment.get({ plain: true })
-      );
-      console.log(comments);
-      res.render('comments', {
-        post,
-        loggedIn: req.session.loggedIn,
-      });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  });
-
-  */
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');

@@ -1,6 +1,10 @@
 <section class="card">
 
-<header>{{post.title}}</header>
+<header>
+    <div>{{post.title}}</div>
+    <div id="poster">Posted on {{format_time post.createdAt}}</div>
+    <div>{{username}}</div>
+</header>
 
 <div class="card-body">
     <p>{{post.content}}</p>
@@ -11,7 +15,7 @@
     <button type="submit">Submit</button>
 </form>
 
-{{#each comments as |comment|}}
+{{#each post.comments as |comment|}}
 {{> comment-details}}
 {{/each}}
 
