@@ -1,18 +1,23 @@
+<script src="./js/comment.js"></script>
 <section class="card">
 
 <header>
     <div>{{post.title}}</div>
     <div id="poster">Posted on {{format_time post.createdAt}}</div>
-    <div>{{username}}</div>
 </header>
 
 <div class="card-body">
     <p>{{post.content}}</p>
 </div>
 
-<form id="myForm">
-    <input type="text" id="comment" placeholder="Add a comment">
-    <button type="submit">Submit</button>
+<form class="form comment-form">
+    <div class="form-group">
+        <label for="comment-body">Add a comment:</label>
+        <input class="form-input" type="comment" id="comment-body" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
 </form>
 
 {{#each post.comments as |comment|}}
@@ -20,3 +25,6 @@
 {{/each}}
 
 </section>
+
+
+
