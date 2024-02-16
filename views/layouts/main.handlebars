@@ -21,8 +21,9 @@
       <a href="/login">Login</a>
       {{/if}}
     </nav>
-    <div>
+    <div id="title-button">
       <h1>The Tech Blog</h1>
+      <a href="/createpost" id="create-post">New Post</a>
     </div>
 
   </header>
@@ -35,6 +36,8 @@
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
+
+  <script src="/js/nav.js"></script>
 </body>
 
 </html>

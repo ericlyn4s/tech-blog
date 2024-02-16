@@ -33,6 +33,22 @@ header {
   color: var(--secondary);
 }
 
+#title-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+#create-post {
+  padding: 15px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  margin-right: 30px;
+}
+
+nav a:hover, #create-post:hover {
+  font-weight: bold;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
