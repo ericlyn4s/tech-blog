@@ -1,22 +1,27 @@
-const { Comment } = require('../../models');
-
 const commentFormHandler =  async (event) => {
+  event.preventDefault();
 
   const body = document.querySelector('#comment-body').value;
-  const user_id = 1;
+  const user_id = parseInt(1);
   const post_route = window.location.pathname.lastIndexOf('/');
-  const post_id = window.location.pathname.substring(post_route + 1);
+  const post_id = parseInt(window.location.pathname.substring(post_route + 1));
 
-  const newComment = {
-    'body' : body, 
-    'user_id' : parseInt(user_id),
-    'post_id' : parseInt(post_id),
+  if (body) {
+    const response = await fetch('/api/comments', {
+      method: 'POST',
+      body: JSON.stringify({ body, user_id, post_id }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      document.location.replace(window.location.pathname);
+    } else {
+      alert('Failed to leave comment');
+    }
   };
-
-  await new Comment(newComment);
-
 };
 
 document
   .querySelector('#comment-form')
   .addEventListener('submit', commentFormHandler);
+

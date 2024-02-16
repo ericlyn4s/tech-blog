@@ -1,14 +1,20 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
 
+// CREATE new comment
 router.post('/', async (req, res) => {
     try {
-    const newComment = await Comment.create({
-        body: req.body.body,
-        user_id: req.user.id,
-        post_id: req.params.postID,
-    });
-    res.status(201).json(newComment);
-    } catch (err) {
-    console.log(err);
-    }});
+        const newComment = await Comment.create({
+            body: req.body.body,
+            user_id: req.body.user_id,
+            post_id: req.body.post_id,
+        });
+
+        res.status(201).json(newComment);
+        } catch (err) {
+            console.log(err);
+        }
+});
+
+module.exports = router;
+    
