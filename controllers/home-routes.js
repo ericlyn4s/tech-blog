@@ -64,41 +64,6 @@ router.get('/post/:id', withAuth, async (req, res) => {
     }
   });
 
-  // load the dashboard
-  router.get('/dashboard/:id', withAuth, async (req, res) => {
-    try {
-      // Fetch the post by ID from the database
-      const dbPostData = await Post.findByPk(req.params.id, {
-        include: [
-          {
-            model: Comment, 
-            attributes: ['body'],
-            include: [User],
-          },
-          {
-            model: User,
-            attributes: ['username'],
-          },
-        ],
-      })
-  
-      if (!dbPostData) {
-        return res.status(404).json('Post not found');
-      }
-      
-      const post = dbPostData.get({ plain: true });
-  
-      res.render('comments', { 
-        post, 
-        loggedIn: req.session.loggedIn,
-      });
-  
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-      }
-    });
-
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -117,6 +82,5 @@ router.get('/createpost', withAuth, (req, res) => {
   };
 
 });
-
 
 module.exports = router;

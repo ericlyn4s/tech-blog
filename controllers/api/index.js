@@ -12,4 +12,5 @@ router.use('/comments', commentRoutes);
 
 router.use('/createposts', newPostRoute);
 
+
 module.exports = router;
