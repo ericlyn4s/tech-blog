@@ -4,6 +4,7 @@ const sequelize = require('../config/connection');
 
 class Comment extends Model {}
 
+// Comment relates to USER through USER ID and relates to POST through POST ID
 Comment.init(
   {
     id: {

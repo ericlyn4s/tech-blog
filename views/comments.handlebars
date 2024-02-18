@@ -1,5 +1,6 @@
 <section class="card">
 
+<!-- Each post shows the title and created time/date -->
 <header>
     <div>{{post.title}}</div>
     <div id="poster">Posted on {{format_time post.createdAt}}</div>
@@ -23,6 +24,7 @@
 </form>
 </section>
 
+<!-- Using a helper to then display all comments -->
 {{#each post.comments as |comment|}}
 {{> comment-details}}
 {{/each}}

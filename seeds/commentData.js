@@ -1,5 +1,6 @@
 const { Comment } = require('../models');
 
+// Starting data for the comment table
 const commentdata = [
   {
     body: 'I agree, AI scares me for real!',

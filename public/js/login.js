@@ -4,6 +4,7 @@ const loginFormHandler = async (event) => {
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
+  // Once email and password are given, this makes a FETCH request to the backend
   if (email && password) {
     const response = await fetch('/api/users/login', {
       method: 'POST',
@@ -19,6 +20,7 @@ const loginFormHandler = async (event) => {
   }
 };
 
+// Signup initiates the signupFormHandler function
 const signupFormHandler = async (event) => {
   event.preventDefault();
 

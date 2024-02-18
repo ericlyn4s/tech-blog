@@ -4,6 +4,7 @@ const newPostHandler =  async (event) => {
     const title = document.querySelector('#post-title').value;
     const content = document.querySelector('#post-content').value;
  
+    // New post requires the title and content variables, this will then send a FETCH to the backend
     if (title && content) {
       const response = await fetch('/api/createposts', {
         method: 'POST',

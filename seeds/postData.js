@@ -1,5 +1,6 @@
 const { Post } = require('../models');
 
+// Starting data for the post table
 const postdata = [
   {
     title: 'The Double-Edged Sword: Exploring the Potential Dangers of AI',

@@ -1,3 +1,5 @@
+
+/* CSS is divided into three main secions; main variables, general blocks like header, class id's, etc. and card stylings */
 :root {
   --primary: #02120f;
   --secondary: #a7d2c5;

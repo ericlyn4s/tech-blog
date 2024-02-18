@@ -64,6 +64,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
     }
   });
 
+// LOGIN route
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -73,6 +74,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// GET route for dashboard button, which leads to a create new post function
 router.get('/createpost', withAuth, (req, res) => {
 
   if (req.session.loggedIn) {
@@ -83,4 +85,5 @@ router.get('/createpost', withAuth, (req, res) => {
 
 });
 
+// Export router
 module.exports = router;

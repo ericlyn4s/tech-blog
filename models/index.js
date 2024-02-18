@@ -2,11 +2,13 @@ const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
 
+// POST belongs to USER through user_id
 Post.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE',
 });
 
+// COMMENT belongs to USER through user_id
 Comment.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE',
@@ -21,6 +23,7 @@ Post.hasMany(Comment, {
 module.exports = { User, Post, Comment };
 
 /*
+Some general notes on MVC:
 What view the user hits determines what controller they hit
 What controller is hit determines what model is hit and for what data
 What model is hit determines what data comes back

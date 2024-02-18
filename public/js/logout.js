@@ -1,4 +1,5 @@
-const logout = async () => {
+const logout = async () => { 
+  //Logout function sends a FETCH request to the backend
   const response = await fetch('/api/users/logout', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

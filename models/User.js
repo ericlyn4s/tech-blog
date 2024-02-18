@@ -8,6 +8,7 @@ class User extends Model {
   }
 }
 
+// USER has primary key of ID, no foreign key
 User.init(
   {
     id: {
