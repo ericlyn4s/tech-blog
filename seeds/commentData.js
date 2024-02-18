@@ -7,17 +7,17 @@ const commentdata = [
     post_id: 1,
   },
   {
-    body: 'AI? More like goodbye!!',
+    body: 'This article was very informative. I feel more prepared for the oncoming AI revolution.',
     user_id: 1,
     post_id: 1,
   },
   {
-    body: 'Where am I?',
+    body: "Very helpful article! I'll be sure to try these tips.",
     user_id: 1,
     post_id: 2,
   },
   {
-    body: 'This article seems like trash.',
+    body: "I can't believe tip #6!",
     user_id: 1,
     post_id: 2,
   },
