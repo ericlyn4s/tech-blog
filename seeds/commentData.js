@@ -18,7 +18,7 @@ const commentdata = [
     post_id: 2,
   },
   {
-    body: "I can't believe tip #6!",
+    body: "I can't believe tip #1!",
     user_id: 1,
     post_id: 2,
   },
