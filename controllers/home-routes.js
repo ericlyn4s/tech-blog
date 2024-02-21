@@ -37,7 +37,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
       include: [
         {
           model: Comment, 
-          attributes: ['body'],
+          attributes: ['body', 'createdAt'],
           include: [User],
         },
         {
@@ -52,7 +52,8 @@ router.get('/post/:id', withAuth, async (req, res) => {
     }
     
     const post = dbPostData.get({ plain: true });
-
+    console.log(post);
+    
     res.render('comments', { 
       post, 
       loggedIn: req.session.loggedIn,
@@ -75,10 +76,27 @@ router.get('/login', (req, res) => {
 });
 
 // GET route for dashboard button, which leads to a create new post function
-router.get('/createpost', withAuth, (req, res) => {
+router.get('/createpost', withAuth, async (req, res) => {
+
+    const postData = await Post.findAll({
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+        ],
+        where: {
+          user_id: req.session.user_id,
+        }
+      });
+    
+      const postArray = postData.map((post) =>
+      post.get({ plain: true })
+      );
 
   if (req.session.loggedIn) {
     res.render('createpost', {
+      postArray,
       loggedIn: req.session.loggedIn,
     });
   };
