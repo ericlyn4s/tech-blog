@@ -111,11 +111,6 @@ img {
   justify-content: space-between;
 }
 
-.card:hover {
-  font-weight: bold;
-  text-decoration: none;
-}
-
 .form-group {
   margin-left: 20px;
   font-size: 15px;
