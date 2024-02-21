@@ -14,7 +14,7 @@ https://github.com/ericlyn4s/tech-blog
 
 ## Usage
 
-From the homepage, you can see any articles that have been posted. In order to click further into the site, you'll be implored to signup or login. This will check that your email address is valid and that your password includes a letter and number. Now, you can click on an article from the front page and you'll be taken to that post's path, which includes comments made by other users on the post. You're also given the option to comment on the post yourself. Hitting the 'home' button in the navigation bar will take you back to the homepage. Hitting the 'dashboard' button will take you to a list of all posts you've created. From here, you're also given the option to create a new post. After creating this post, you'll be taken back to the homepage, where your new post will be displayed at the bottom of the list. An option to delete these posts is in development currently.
+From the homepage, you can see any articles that have been posted. In order to click further into the site, you'll be implored to signup or login. This will check that your email address is valid and that your password includes a letter and number. Now, you can click on an article from the front page and you'll be taken to that post's path, which includes comments made by other users on the post. You're also given the option to comment on the post yourself. Hitting the 'home' button in the navigation bar will take you back to the homepage. Hitting the 'dashboard' button will take you to a list of all posts you've created. From here, you're also given the option to create a new post. After creating this post, you'll be taken back to your dashboard, and your new post will be displayed at the top of the list. 
 
 <image src="/public/pictures/dashboard-pic.png" width="650" alt="Image of the dashboard, which includes the option to create a new post"/>
 
@@ -22,7 +22,7 @@ From the homepage, you can see any articles that have been posted. In order to c
 
 ## Credits
 
-I had a tutor session with Charlie Puentes on 2/13/24.
+I had tutor sessions with Charlie Puentes on 2/13/24 and 2/20/24.
 
 ## License
 
