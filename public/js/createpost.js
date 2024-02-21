@@ -14,13 +14,32 @@ const newPostHandler =  async (event) => {
       
       if (response.ok) {
         alert('Post added!');
-        document.location.replace('/');
+        document.location.replace('/createpost');
       } else {
         alert('Failed to add post');
       }
     };
   };
-  
+/* Future development; adding a delete button
+  const deleteHandler = async (event) => {
+    alert('hey');
+    const response = await fetch('/api/createpost', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      alert('Post deleted!');
+      document.location.replace('/createpost');
+    }
+  };
+  */
+ 
   document
     .querySelector('#new-post')
     .addEventListener('submit', newPostHandler);
+ 
+    /* Future development; adding a delete button
+  document  
+    .getElementById('button-delete')
+    .addEventListener('click', deleteHandler);

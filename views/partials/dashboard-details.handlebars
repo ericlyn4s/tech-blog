@@ -1,0 +1,17 @@
+<section class="card">
+
+<!-- Each posted shows user and posted on time -->
+<header>
+    <div>{{title}}</div>
+    <div id="poster">Posted on {{format_time createdAt}} by {{user.username}}</div>
+    <!--  Future development; adding a delete button 
+    <button id="button-delete">Delete</button>
+    -->
+</header>
+<div class="card-body">
+    <p>{{content}}</p>
+</div>
+
+</section>
+
+<script src="./js/createpost.js"></script>

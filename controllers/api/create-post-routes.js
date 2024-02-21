@@ -17,11 +17,21 @@ router.post('/', async (req, res) => {
         }
 });
 
-// UPDATE existing post
-router.put('/createpost/:id', async (req,res))
+/* DELETE existing post - coming soon
+router.delete('/createpost/', async (req, res) => {
+    try {
+        await Post.destroy({
+            where: {
+                post_id: 1
+            }
+        });
+        res.status(201).json();
 
-
-
+        } catch (err) {
+        console.log(err);
+        }
+});
+*/
 
 
 // Export router
