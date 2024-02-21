@@ -22,7 +22,7 @@ From the homepage, you can see any articles that have been posted. In order to c
 
 ## Credits
 
-I had a tutor session with Charlie Puentes on 2/13/24.
+I had tutor sessions with Charlie Puentes on 2/13/24 and 2/20/24.
 
 ## License
 
