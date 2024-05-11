@@ -7,7 +7,7 @@ The tech blog project is culmination of the last few week's learnings: the MVC p
 ## Installation
 
 My application is being hosted on Heroku here:
-https://aqueous-springs-68236-b5e4d5df42c9.herokuapp.com/
+[https://git.heroku.com/tech-blog-ep.git](https://tech-blog-ep-272122b79d8e.herokuapp.com/
 
 The repository can also be cloned here:
 https://github.com/ericlyn4s/tech-blog
